@@ -1,0 +1,48 @@
+[
+    { 
+        "service_id": "01",
+        "title": "Crystal Flower",
+        "img": "https://i.ibb.co/m0nhrrT/Untitled-design-4.jpg",
+        "price": "20.00",
+        "description": "Beautiful Crystal Flower showpiece with impressive colours"
+    },
+    { 
+        "service_id": "02",
+        "title": "Handicrafts Decorative Items",
+        "img": "https://i.ibb.co/XZWbb02/Untitled-design-1.jpg",
+        "price": "10.00",
+        "description": "Beautiful Hand crafted colorful decorative items."
+    },
+    
+    { 
+        "service_id": "03", 
+        "title": "Artistic Painted",
+        "img": "https://i.ibb.co/Wk3dWpX/Untitled-design-2.jpg",
+        "price": "10.00",
+        "description": "Artistic painted colorful handcrafted Products."
+    },
+    
+    { 
+        "service_id": "04",
+        "title": "Showpiece",
+        "img": "https://i.ibb.co/LpK39BG/Untitled-design-5.jpg",
+        "price": "20.00",
+        "description": "Beautiful Floral Design Crystal/ Glass White,Pink,Yellow Pot/Showpiece."
+        
+    },
+    
+    { 
+        "service_id": "05",
+        "title": "Handicrafts",
+        "img": "https://i.ibb.co/tmqr2Lh/Untitled-design.jpg",
+        "price": "15.00",
+        "description": "Hand made heavy work Ambabari Elephant Sawari of King Lucky Charm multi color with clean finish."
+    },
+    {  
+        "service_id": "06",
+        "title": "Table Lamp",
+        "img": "https://i.ibb.co/nnMM34h/Untitled-design-3.jpg",
+        "price": "10.00",
+        "description": "Antique Marble Table Lamp, Marble Showpiece, Home Decor Item."
+    }
+]
