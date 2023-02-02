@@ -17,6 +17,27 @@ const Orders = () => {
 
 
 
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure, you want to cancel this order');
+        if (proceed) {
+            fetch(`http://localhost:4000/orders/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        alert('Deleted Successfully');
+                        const remaining = orders.filter(odr => odr._id !== id);
+                        setOrders(remaining)
+                    }
+                })
+        }
+    }
+
+
+
+
 
     return (
         <div>
@@ -42,8 +63,8 @@ const Orders = () => {
                             orders.map(order => <OrderRow
                                 key={order._id}
                                 order={order}
-                                // handleDelete={handleDelete}
-                                // handleStatusUpdate={handleStatusUpdate}
+                                handleDelete={handleDelete}
+                            // handleStatusUpdate={handleStatusUpdate}
                             ></OrderRow>)
                         }
 

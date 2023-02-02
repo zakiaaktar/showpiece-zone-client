@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const OrderRow = ({ order }) => {
+const OrderRow = ({ order, handleDelete }) => {
     const { _id, serviceName, customer, price, service, phone, status } = order;
     const [orderService, setOrderService] = useState({});
 
@@ -16,11 +16,13 @@ const OrderRow = ({ order }) => {
 
 
 
+
+
     return (
         <tr>
             <th>
-            <label>
-                    <button className='btn btn-ghost'>X</button>
+                <label>
+                    <button onClick={() => handleDelete(_id)} className='btn btn-ghost'>X</button>
                 </label>
             </th>
             <td>
