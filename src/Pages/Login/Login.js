@@ -1,10 +1,16 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
     const { login } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+
+    const from = location.state?.from?.pathname || '/';
+
 
 
 
@@ -18,24 +24,42 @@ const Login = () => {
         login(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user.email);
+
+                const currentUser = {
+                    email: user.email
+                }
+
+                console.log(currentUser);
 
 
-                // const currentUser = {
-                //     email: user.email
-                // }
+                // get jwt token
+                fetch('http://localhost:4000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
 
-                // console.log(currentUser);
+
+                        localStorage.setItem('showpiece-token', data.token);
+                        navigate(from, { replace: true });
+                    });
+
             })
-            .then(error => console.log(error));
-        }
+            .catch(error => console.log(error));
+    }
 
 
 
 
 
     return (
-         <div className="hero w-full my-20">
+        <div className="hero w-full my-20">
             <div className="hero-content grid md:grid-cols-2 gap-20 flex-col lg:flex-row">
                 <div className="text-center lg:text-left">
 

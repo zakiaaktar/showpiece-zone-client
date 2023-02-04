@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import app from '../../firebase/firebase.config'
 
 
@@ -21,6 +21,11 @@ const AuthProvider = ({children}) => {
     const login = (email, password) =>{
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
+    }
+
+    const logOut = () =>{
+        localStorage.removeItem('showpiece-token');
+        return signOut(auth);
     }
 
 
@@ -46,6 +51,7 @@ const AuthProvider = ({children}) => {
         loading,
         createUser,
         login,
+        logOut,
     }
 
 

@@ -31,7 +31,8 @@ const Checkout = () => {
         fetch('http://localhost:4000/orders', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('showpiece-token')}`
             },
             body: JSON.stringify(order)
         })
@@ -47,7 +48,7 @@ const Checkout = () => {
 
     }
 
-    
+
 
 
     return (
