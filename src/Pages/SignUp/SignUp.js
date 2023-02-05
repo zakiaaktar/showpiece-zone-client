@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { setAuthToken } from '../../api/auth';
 import img from '../../assets/images/login/login.svg'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
@@ -22,6 +23,7 @@ const SignUp = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            setAuthToken(user);
         })
         .catch(err => console.log(err));
     }
@@ -56,11 +58,11 @@ const SignUp = () => {
                             <input type="password" name="password" placeholder="password" className="input input-bordered" required/>
                         </div>
                         <div className="form-control mt-6">
-                            <input className="btn btn-primary" type="submit" value="Sign Up" />
+                            <input className="btn bg-gradient-to-br from-blue-900 to-purple-500 rounded-none" type="submit" value="Sign Up" />
                         </div>
                     </form>
 
-                    <p className='text-center'>Already have an account? <Link className='text-orange-600 font-bold' to='/login'>Login</Link></p>
+                    <p className='text-center'>Already have an account? <Link className='text-blue-900 font-bold' to='/login'>Login</Link></p>
 
 
                 </div>

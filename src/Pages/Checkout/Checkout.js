@@ -28,7 +28,7 @@ const Checkout = () => {
 
 
 
-        fetch('http://localhost:4000/orders', {
+        fetch('https://showpiece-zone-server.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

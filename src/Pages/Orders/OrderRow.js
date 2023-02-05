@@ -7,7 +7,7 @@ const OrderRow = ({ order, handleDelete, handleStatusUpdate }) => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:4000/services/${service}`)
+        fetch(`https://showpiece-zone-server.vercel.app/services/${service}`)
             .then(res => res.json())
             .then(data => setOrderService(data));
     }, [service])
@@ -46,7 +46,7 @@ const OrderRow = ({ order, handleDelete, handleStatusUpdate }) => {
                 <br />
                 <span className="badge badge-ghost badge-sm">${price}</span>
             </td>
-           
+
             <th>
                 <button
                     onClick={() => handleStatusUpdate(_id)} className="btn btn-ghost btn-xs">{status ? status : 'pending'}</button>

@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
     const { login } = useContext(AuthContext);
@@ -34,7 +35,7 @@ const Login = () => {
 
 
                 // get jwt token
-                fetch('http://localhost:4000/jwt', {
+                fetch('https://showpiece-zone-server.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -80,15 +81,18 @@ const Login = () => {
                             </label>
                             <input type="password" name="password" placeholder="password" className="input input-bordered" />
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <Link href="#" alt="" className="label-text-alt link link-hover">Forgot password?</Link>
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <input className="btn btn-primary" type="submit" value="Login" />
+                            <input className="btn bg-gradient-to-br from-blue-900 to-purple-500 rounded-none" type="submit" value="Login" />
                         </div>
                     </form>
 
-                    <p className='text-center'>New to Genius car <Link className='text-orange-600 font-bold' to='/signup'>Sign Up</Link></p>
+                    <p className='text-center'><small>New to Showpiece Zone</small> <Link className='text-blue-900 font-bold' to='/signup'>Sign Up</Link></p>
+
+                    <SocialLogin></SocialLogin>
+
 
 
                 </div>
