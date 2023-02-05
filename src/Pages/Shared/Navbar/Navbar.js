@@ -45,8 +45,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <Link to="/" className="btn btn-ghost normal-case text-xl">
-                    {/* <img className='logo-size' src={logo} alt="" /> */}
-                    <h2 className='text-green-500 font-bold logo-text'>Showpiece <span className='text-secondary font-bold'>Zone</span></h2>
+                    
+                    <h2 className='text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-400 text-3xl font-bold '>Showpiece Zone</h2>
+                    
 
                 </Link>
             </div>
@@ -62,3 +63,8 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+
