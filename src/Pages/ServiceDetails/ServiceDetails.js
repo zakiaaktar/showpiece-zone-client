@@ -8,13 +8,13 @@ const ServiceDetails = () => {
     
     
     return (
-        <div className="card card-side bg-base-100 shadow-xl">
-        <figure>
+        <div className="card card-side bg-base-100 shadow-xl rounded-none mb-14 mt-14">
+        <figure className='w-1/2'>
 
             <img src={img} alt='service-img' />
 
         </figure>
-        <div className="card-body">
+        <div className="card-body w-1/2">
             <h2 className="card-title text-2xl text-blue-900">{title}</h2>
             <p>{description}</p>
             <p className='text-xl text-blue-900 font-bold text-semibold'>Price: ${price}</p>

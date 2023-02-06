@@ -46,7 +46,7 @@ const Navbar = () => {
                 </div>
                 <Link to="/" className="btn btn-ghost normal-case text-xl">
                     
-                    <h2 className='text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-400 text-3xl font-bold '>Showpiece Zone</h2>
+                    <h2 className='text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-400 text-2xl font-bold '>Showpiece Zone</h2>
                     
 
                 </Link>

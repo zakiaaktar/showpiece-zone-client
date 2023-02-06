@@ -18,7 +18,7 @@ const InfoCards = () => {
         {
             id: 2,
             name: 'Location',
-            description: 'Rotterdam, TheNetherlands',
+            description: 'Rotterdam, The Netherlands',
             icon: marker,
             bgClass: 'bg-gradient-to-r from-gray-400  to-gray-300 rounded-lg'
         },

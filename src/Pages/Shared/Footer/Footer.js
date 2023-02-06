@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="footer p-24 bg-gradient-to-br from-blue-900 to-purple-500 text-white">
+        <footer className="footer p-8 bg-gradient-to-br from-blue-900 to-purple-500 text-white">
             <div>
 
                 <p><span className='text-2xl font-bold'>Showpiece Zone Ltd.</span><br />Providing reliable tech since 2022</p>

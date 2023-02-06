@@ -7,9 +7,9 @@ const ServiceCard = ({ service }) => {
 
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl rounded-none">
+        <div className="card w-96 bg-base-100 shadow-xl rounded-none" data-aos="zoom-in-up">
             <figure><img src={img} alt="service-img" /></figure>
-            <div className="card-body">
+            <div className="card-body items-center text-center">
                 <h2 className="card-title text-2xl text-blue-900">{title}</h2>
                 <p>{description}</p>
                 <p className='text-xl text-blue-900 font-bold'>Price: ${price}</p>

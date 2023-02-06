@@ -52,7 +52,7 @@ const Checkout = () => {
 
 
     return (
-        <div>
+        <div className='card bg-base-100 shadow-xl rounded-none mb-6 p-6'>
 
             <form onSubmit={handlePlaceOrder}>
                 <div className='text-center mt-6 mb-6 font-bold'>
